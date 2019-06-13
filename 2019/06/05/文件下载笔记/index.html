@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载超链接 手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文件的输入流：输入流是固定 response.getOutputStr">
+<meta name="description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 <meta name="keywords" content="Java EE,服务器,文件下载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器实现文件下载">
 <meta property="og:url" content="http://yoursite.com/2019/06/05/文件下载笔记/index.html">
 <meta property="og:site_name" content="八度空间">
-<meta property="og:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载超链接 手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文件的输入流：输入流是固定 response.getOutputStr">
+<meta property="og:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T07:46:21.066Z">
+<meta property="og:updated_time" content="2019-06-13T08:57:12.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器实现文件下载">
-<meta name="twitter:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载超链接 手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文件的输入流：输入流是固定 response.getOutputStr">
+<meta name="twitter:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 
 
 
@@ -258,7 +258,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cato">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/cato.github.io/uploads/avatar.jpg">
+      <meta itemprop="image" content="/cato.github.io/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -345,7 +345,8 @@
 <li>commons-fileupload</li>
 <li>commons-io</li>
 </ul>
-<h2 id="文件下载-API"><a href="#文件下载-API" class="headerlink" title="文件下载 API"></a>文件下载 API</h2><h3 id="使用超链接的方式实现文件的下载"><a href="#使用超链接的方式实现文件的下载" class="headerlink" title="使用超链接的方式实现文件的下载"></a>使用超链接的方式实现文件的下载</h3><p><a href="文件的路径">超链接</a></p>
+<h2 id="文件下载-API"><a href="#文件下载-API" class="headerlink" title="文件下载 API"></a>文件下载 API</h2><h3 id="使用超链接的方式实现文件的下载"><a href="#使用超链接的方式实现文件的下载" class="headerlink" title="使用超链接的方式实现文件的下载"></a>使用超链接的方式实现文件的下载</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"文件的路径"</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="手动编码实现文件的下载"><a href="#手动编码实现文件的下载" class="headerlink" title="手动编码实现文件的下载"></a>手动编码实现文件的下载</h3><ul>
 <li>设置两个头和一个流<ul>
 <li>Content-Type: 文件的 MIME 类型</li>
@@ -356,7 +357,7 @@
 </ul>
 <h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><p>遍历一个目录内的所有内容</p>
 <p>使用树的遍历：广度优先遍历</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">   /*</span><br><span class="line"> * 1. 创建队列</span><br><span class="line"> * 2. 创建根目录</span><br><span class="line"> * 3. 添加根目录进队列</span><br><span class="line"></span><br><span class="line"> * while 循环遍历目录过程：</span><br><span class="line"></span><br><span class="line"> * 循环判断条件：判断队列是否为空</span><br><span class="line"> * 循环体：</span><br><span class="line"> * 1. 队列出列一个元素</span><br><span class="line"> * 2. 获取它里面的所有 File 对象(listFiles()),循环遍历 File[]</span><br><span class="line"> * 3. 判断该元素是否叶子节点（使用  isFile() 方法）</span><br><span class="line"> * 4. 返回 true 则为叶子节点，使用 HTML 标签显示该文件链接提供下载</span><br><span class="line"> * 5. 返回 false 则为目录，添加进队列</span><br><span class="line">    */</span><br><span class="line"></span><br><span class="line">Queue&lt;File&gt; queue = new LinkedList&lt;File&gt;();</span><br><span class="line">File root = new File(&quot;C:\\Users\\cato\\Desktop\\Resource&quot;);</span><br><span class="line">queue.offer(root);</span><br><span class="line">while (!queue.isEmpty()) &#123;</span><br><span class="line">	File file = queue.poll();</span><br><span class="line">	File[] files = file.listFiles();</span><br><span class="line">	for (File son : files) &#123;</span><br><span class="line">		if (son.isFile()) &#123;</span><br><span class="line">			%&gt;</span><br><span class="line">			&lt;h4&gt;&lt;a href=&quot;$&#123; pageContext.request.contextPath &#125;/DownloadServlet?filename=&lt;%= son.getCanonicalPath() %&gt;&quot;&gt;&lt;%= son.getName() %&gt;&lt;/a&gt; &lt;/h4&gt;</span><br><span class="line">			&lt;%</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			queue.offer(son);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 1. 创建队列</span></span><br><span class="line"><span class="comment"> * 2. 创建根目录</span></span><br><span class="line"><span class="comment"> * 3. 添加根目录进队列</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * while 循环遍历目录过程：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * 循环判断条件：判断队列是否为空</span></span><br><span class="line"><span class="comment"> * 循环体：</span></span><br><span class="line"><span class="comment"> * 1. 队列出列一个元素</span></span><br><span class="line"><span class="comment"> * 2. 获取它里面的所有 File 对象(listFiles()),循环遍历 File[]</span></span><br><span class="line"><span class="comment"> * 3. 判断该元素是否叶子节点（使用  isFile() 方法）</span></span><br><span class="line"><span class="comment"> * 4. 返回 true 则为叶子节点，使用 HTML 标签显示该文件链接提供下载</span></span><br><span class="line"><span class="comment"> * 5. 返回 false 则为目录，添加进队列</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">Queue&lt;File&gt; queue = <span class="keyword">new</span> LinkedList&lt;File&gt;();</span><br><span class="line">File root = <span class="keyword">new</span> File(<span class="string">"C:\\Users\\cato\\Desktop\\Resource"</span>);</span><br><span class="line">queue.offer(root);</span><br><span class="line"><span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">	File file = queue.poll();</span><br><span class="line">	File[] files = file.listFiles();</span><br><span class="line">	<span class="keyword">for</span> (File son : files) &#123;</span><br><span class="line">		<span class="keyword">if</span> (son.isFile()) &#123;</span><br><span class="line">			%&gt;</span><br><span class="line">			&lt;h4&gt;&lt;a href="$&#123; pageContext.request.contextPath &#125;/DownloadServlet?filename=&lt;%= son.getCanonicalPath() %&gt;"&gt;&lt;%= son.getName() %&gt;&lt;/a&gt; &lt;/h4&gt;</span><br><span class="line">			&lt;%</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			queue.offer(son);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -474,7 +475,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/cato.github.io/uploads/avatar.jpg" alt="Cato">
+              <img class="site-author-image" itemprop="image" src="/cato.github.io/images/avatar.jpg" alt="Cato">
             
               <p class="site-author-name" itemprop="name">Cato</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -499,10 +500,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/cato.github.io/tags/index.html">
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -510,6 +511,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Cato-chuk" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:cato.chuk@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
