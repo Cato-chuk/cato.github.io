@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
+<meta name="description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;文件名&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 <meta name="keywords" content="Java EE,服务器,文件下载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器实现文件下载">
 <meta property="og:url" content="http://yoursite.com/2019/06/05/文件下载笔记/index.html">
 <meta property="og:site_name" content="八度空间">
-<meta property="og:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
+<meta property="og:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;文件名&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T08:57:12.069Z">
+<meta property="og:updated_time" content="2019-06-13T14:55:24.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器实现文件下载">
-<meta name="twitter:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;超链接&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
+<meta name="twitter:description" content="服务器文件下载需要的 jar 包 commons-fileupload commons-io  文件下载 API使用超链接的方式实现文件的下载1&amp;lt;a href=&quot;文件的路径&quot;&amp;gt;文件名&amp;lt;/a&amp;gt;  手动编码实现文件的下载 设置两个头和一个流 Content-Type: 文件的 MIME 类型 Content-Disposition：浏览器支持该格式的文件，提示下载 设置代表该文">
 
 
 
@@ -100,7 +100,7 @@
     root: '/cato.github.io/',
     scheme: 'Muse',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -345,7 +345,7 @@
 <li>commons-fileupload</li>
 <li>commons-io</li>
 </ul>
-<h2 id="文件下载-API"><a href="#文件下载-API" class="headerlink" title="文件下载 API"></a>文件下载 API</h2><h3 id="使用超链接的方式实现文件的下载"><a href="#使用超链接的方式实现文件的下载" class="headerlink" title="使用超链接的方式实现文件的下载"></a>使用超链接的方式实现文件的下载</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"文件的路径"</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="文件下载-API"><a href="#文件下载-API" class="headerlink" title="文件下载 API"></a>文件下载 API</h2><h3 id="使用超链接的方式实现文件的下载"><a href="#使用超链接的方式实现文件的下载" class="headerlink" title="使用超链接的方式实现文件的下载"></a>使用超链接的方式实现文件的下载</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"文件的路径"</span>&gt;</span>文件名<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="手动编码实现文件的下载"><a href="#手动编码实现文件的下载" class="headerlink" title="手动编码实现文件的下载"></a>手动编码实现文件的下载</h3><ul>
 <li>设置两个头和一个流<ul>
@@ -608,6 +608,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
