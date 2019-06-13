@@ -501,8 +501,7 @@
 <li>commons-fileupload</li>
 <li>commons-io</li>
 </ul>
-<h2 id="文件上传-API"><a href="#文件上传-API" class="headerlink" title="文件上传 API"></a>文件上传 API</h2><h3 id="DiskFileItemFactor-磁盘文件项工厂类"><a href="#DiskFileItemFactor-磁盘文件项工厂类" class="headerlink" title="DiskFileItemFactor: 磁盘文件项工厂类"></a>DiskFileItemFactor: 磁盘文件项工厂类</h3><ul>
-<li><p>Initial：</p>
+<h2 id="文件上传-API"><a href="#文件上传-API" class="headerlink" title="文件上传 API"></a>文件上传 API</h2><h3 id="DiskFileItemFactor-磁盘文件项工厂类"><a href="#DiskFileItemFactor-磁盘文件项工厂类" class="headerlink" title="DiskFileItemFactor: 磁盘文件项工厂类"></a>DiskFileItemFactor: 磁盘文件项工厂类</h3><p><em>Initial</em></p>
 <ul>
 <li><code>DiskFileItemFactory()</code></li>
 <li><code>DiskFileItemFactory(int sizeThreshold,File repostory)</code><ul>
@@ -511,26 +510,20 @@
 </ul>
 </li>
 </ul>
-</li>
-<li><p>Method：</p>
+<p><em>Method</em></p>
 <ul>
 <li><code>setSizeThreshold()</code>: 设置缓冲区大小</li>
 <li><code>setRepository</code>: 设置临时文件存放的路径</li>
 </ul>
-</li>
-<li><p>Usage:</p>
-</li>
-</ul>
+<p><em>Usage</em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.创建磁盘文件项工厂</span></span><br><span class="line">DiskFileItemFactory disFileItemFactory = <span class="keyword">new</span> DiskFileItemFactory();</span><br><span class="line"><span class="comment">// 1.1 设置缓冲区的大小</span></span><br><span class="line">diskFileItemFactory.setSizeThreshold(<span class="number">3</span> * <span class="number">1024</span> * <span class="number">1024</span>); <span class="comment">// 设置缓冲区的大小未 3M</span></span><br><span class="line"><span class="comment">// 1.2 设置临时文件存放的路径</span></span><br><span class="line"><span class="comment">// 创建新的临时文件存放的路径的 String 对象</span></span><br><span class="line">String tempPath = getServletContext().getRealPath(<span class="string">"/temp"</span>);</span><br><span class="line">diskFileItemFactory.setRepository(<span class="keyword">new</span> File(tempPath));</span><br></pre></td></tr></table></figure>
 
-<h3 id="ServletFileUpload-核心解析类"><a href="#ServletFileUpload-核心解析类" class="headerlink" title="ServletFileUpload: 核心解析类"></a>ServletFileUpload: 核心解析类</h3><ul>
-<li><p>Initial:</p>
+<h3 id="ServletFileUpload-核心解析类"><a href="#ServletFileUpload-核心解析类" class="headerlink" title="ServletFileUpload: 核心解析类"></a>ServletFileUpload: 核心解析类</h3><p><em>Initial</em></p>
 <ul>
 <li><code>ServletFileUpload</code></li>
 <li><code>ServletFileUpload(FileItemFactory fileItemFactory)</code></li>
 </ul>
-</li>
-<li><p>Method:</p>
+<p><em>Method</em></p>
 <ul>
 <li><p><code>(static boolean) isMultipartContent(HttpServletRequest request)</code>: 判断表单的 enctype 属性是否正确</p>
 </li>
@@ -545,11 +538,8 @@
 <li><p><code>setProgressListener(ProgressListener pListener)</code>: 设置监听文件上传的进度</p>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="FileItem-文件项"><a href="#FileItem-文件项" class="headerlink" title="FileItem 文件项"></a>FileItem 文件项</h3><ul>
-<li><p>Usage：</p>
-</li>
+<h3 id="FileItem-文件项"><a href="#FileItem-文件项" class="headerlink" title="FileItem 文件项"></a>FileItem 文件项</h3><p><em>Usage</em></p>
+<ul>
 <li><p>普通项 </p>
 <ul>
 <li><p><code>(boolean) isFormField()</code>: 判断表单项是普通项还是文件上传项。如果为 true 代表是普通项</p>
@@ -591,29 +581,21 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 UUID 获取随机的唯一标识</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getUniqueFileName</span><span class="params">(String fileName)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> idx = fileName.lastIndexOf(<span class="string">"."</span>);</span><br><span class="line">	String extetions = fileName.substring(idx);</span><br><span class="line">	<span class="keyword">return</span> UUID.randomUUID().toString().replace(<span class="string">"-"</span>, <span class="string">""</span>) + 	extetions;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>同一目录下存放文件过多，打开时卡顿且不便管理<br>  解决方法：</p>
+<li><p>同一目录下存放文件过多，打开时卡顿且不便管理<br>  <em>解决方法：</em></p>
 <ul>
-<li><p>按时间分离：月、周、天、毫秒等</p>
-</li>
-<li><p>按用户分离：user id</p>
-</li>
-<li><p>按个数分离：一个目录放3000个文件</p>
-</li>
-<li><p>按目录分离算法：以某种特定算法分离</p>
-<p>目录分离算法简述：</p>
-</li>
-<li><p>创建一个唯一文件名</p>
-</li>
-<li><p>获取上面文件名的 hashCode 值：int 类型（32 位）</p>
-</li>
-<li><p>让 hashCode 的值 &amp; 0xf：得出来的值作为一级目录的名字</p>
-</li>
-<li><p>让hashCode 右移 4 位( &gt;&gt;&gt; 4 )</p>
-</li>
-<li><p>让 hashCode 的值 &amp; 0xf：得出来的值作为二级目录的名字</p>
-</li>
-<li><p>…(以此类推到想要的层级数)</p>
-</li>
+<li>按时间分离：月、周、天、毫秒等</li>
+<li>按用户分离：user id</li>
+<li>按个数分离：一个目录放3000个文件</li>
+<li>按目录分离算法：以某种特定算法分离</li>
+</ul>
+<p>  <em>目录分离算法简述：</em></p>
+<ul>
+<li>创建一个唯一文件名</li>
+<li>获取上面文件名的 hashCode 值：int 类型（32 位）</li>
+<li>让 hashCode 的值 &amp; 0xf：得出来的值作为一级目录的名字</li>
+<li>让hashCode 右移 4 位( &gt;&gt;&gt; 4 )</li>
+<li>让 hashCode 的值 &amp; 0xf：得出来的值作为二级目录的名字</li>
+<li>…(以此类推到想要的层级数)</li>
 </ul>
 </li>
 </ul>
